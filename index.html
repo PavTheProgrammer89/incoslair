@@ -9,6 +9,7 @@
                 margin: 40px;
                 line-height: 1.6;
                 color: #333;
+                transition: background-color 0.3s, color 0.3s;
             }
             
             a {
@@ -30,9 +31,9 @@
                 position: fixed;
                 top: 20px;
                 right: 20px;
-                background-color: rgb(68, 62, 62);
+                background-color: #ffffff;
                 padding: 10px;
-                border: 1px solid #ffffff;
+                border: 1px solid #ccc;
                 border-radius: 6px;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.1);
                 z-index: 1000;
@@ -48,12 +49,47 @@
                 border: 1px solid #ccc;
                 cursor: pointer;
             }
+
+            #theme-container {
+                position: fixed;
+                top: 85px; 
+                right: 20px;
+                background-color: #ffffff;
+                padding: 15px;
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                z-index: 999;
+                width: 200px;
+                font-size: 14px;
+                color: #202122;
+            }
+
+            .theme-header {
+                font-weight: bold;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #eaecf0;
+                color: #202122;
+            }
+
+            .theme-option {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                cursor: pointer;
+            }
+
+            .theme-option input {
+                margin-right: 10px;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
 
         <div id="nav-container">
-            <label for="nav-select" style="font-weight: bold;" color="#ffffff">Go To (Section):</label>
+            <label for="nav-select" style="font-weight: bold;">Go To (Section):</label>
             <select id="nav-select" onchange="const el = document.getElementById(this.value); if(el) el.scrollIntoView({behavior: 'smooth'});">
                 <option value="" disabled selected>Select Section</option>
                 <option value="section-how-to-play">How to Play</option>
@@ -61,6 +97,18 @@
                 <option value="section-credits">Credits</option>
                 <option value="section-follow-game-updates">Follow the Game</option>
             </select>
+        </div>
+
+        <div id="theme-container">
+            <div class="theme-header">Theme (beta)</div>
+            <label class="theme-option">
+                <input type="radio" name="theme_color" value="light" checked onchange="document.body.style.backgroundColor='#ffffff'; document.body.style.color='#333';">
+                Light
+            </label>
+            <label class="theme-option">
+                <input type="radio" name="theme_color" value="dark" onchange="document.body.style.backgroundColor='#202122'; document.body.style.color='#ffffff';">
+                Dark
+            </label>
         </div>
 
         <h1 id="section-how-to-play">The World Explodes in 90 Seconds | How to Play</h1>
