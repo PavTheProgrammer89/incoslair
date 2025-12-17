@@ -32,7 +32,6 @@
         <link rel="canonical" href="https://your-domain.com/theworldexplodes/">
         <style>
             :root {
-                /* Color variables */
                 --color-text-light: #333;
                 --color-text-dark: #ffffff;
                 --color-bg-light: #ffffff;
@@ -42,25 +41,17 @@
                 --color-border-light: #eaecef;
                 --color-shadow: rgba(0, 0, 0, 0.1);
                 --color-shadow-strong: rgba(0, 0, 0, 0.15);
-
-                /* Spacing variables */
                 --spacing-xs: 5px;
                 --spacing-sm: 10px;
                 --spacing-md: 15px;
                 --spacing-lg: 20px;
                 --spacing-xl: 24px;
                 --spacing-xxl: 40px;
-
-                /* Border radius */
                 --radius-sm: 4px;
                 --radius-md: 6px;
                 --radius-lg: 8px;
-
-                /* Font sizes */
                 --font-size-sm: 14px;
                 --font-size-base: 16px;
-
-                /* Transitions */
                 --transition-theme: background-color 0.3s, color 0.3s;
                 --transition-hover: text-decoration 0.2s;
             }
@@ -75,7 +66,6 @@
                 padding-top: 60px;
             }
 
-            /* Dark theme overrides */
             body[data-theme="dark"] {
                 color: var(--color-text-dark);
                 background-color: var(--color-bg-dark);
@@ -91,7 +81,6 @@
                 text-decoration: underline;
             }
 
-            /* Typography */
             h1 {
                 border-bottom: 1px solid var(--color-border-light);
                 padding-bottom: .3em;
@@ -110,7 +99,6 @@
                 color: black;
             }
 
-            /* Images */
             img {
                 max-width: 100%;
                 height: auto;
@@ -119,7 +107,6 @@
                 margin: var(--spacing-sm) 0;
             }
 
-            /* Navigation */
             #nav-container {
                 position: fixed;
                 top: var(--spacing-lg);
@@ -168,7 +155,6 @@
                 color: var(--color-text-dark);
             }
 
-            /* Theme selector */
             #theme-container {
                 position: fixed;
                 top: 85px;
@@ -211,7 +197,6 @@
                 cursor: pointer;
             }
 
-            /* Accessibility */
             .sr-only {
                 position: absolute;
                 width: 1px;
@@ -224,14 +209,12 @@
                 border: 0;
             }
 
-            /* Enhanced focus states */
             #nav-select:focus,
             .theme-option input:focus {
                 outline: 2px solid var(--color-accent);
                 outline-offset: 2px;
             }
 
-            /* Content styling */
             .asset-item {
                 margin-bottom: 2em;
                 padding: 1em;
@@ -255,7 +238,6 @@
                 color: black;
             }
 
-            /* Code styling */
             code {
                 background-color: rgba(0, 0, 0, 0.1);
                 padding: 2px 4px;
@@ -268,7 +250,6 @@
                 background-color: rgba(255, 255, 255, 0.1);
             }
 
-            /* List styling */
             ul, ol {
                 padding-left: 1.5em;
             }
@@ -277,7 +258,6 @@
                 margin-bottom: 0.5em;
             }
 
-            /* Figure and figcaption styling */
             figure {
                 margin: var(--spacing-md) 0;
             }
@@ -302,7 +282,6 @@
                 color: white;
             }
 
-            /* Mobile responsiveness */
             @media (max-width: 768px) {
                 body {
                     margin: var(--spacing-lg);
@@ -327,7 +306,6 @@
                     padding: 0.75em;
                 }
 
-                /* Improve touch targets on mobile */
                 #nav-select,
                 .theme-option input {
                     min-height: 44px;
@@ -338,7 +316,6 @@
                     padding: var(--spacing-xs) 0;
                 }
 
-                /* Better spacing for mobile */
                 h2 {
                     margin-top: var(--spacing-lg);
                     margin-bottom: var(--spacing-md);
@@ -349,7 +326,6 @@
                 }
             }
 
-            /* Print styles */
             @media print {
                 body {
                     margin: 0;
